@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - Seu Site de Tecnologia</title>
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        @keyframes slideParaCima {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fundo-container {
+            height: 100vh; 
+            width: 100%;
+            position: relative;
+            background-image: url("https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .conteudo-por-cima {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            color: #ffffff;
+            /* Sombra escura (agora aplicada a TUDO, incluindo botões) */
+            text-shadow: 0 2px 8px rgba(0,0,0,0.7); 
+            background-color: rgba(0, 0, 0, 0.3); 
+        }
+
+        header {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.4); 
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            /* A sombra rosa foi removida daqui */
+        }
+
+        nav a:hover {
+            background-color: rgba(250, 32, 159, 0.2);
+        }
+
+        main {
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        main h1 {
+            font-size: 3.5em;
+            margin: 0;
+            opacity: 0; 
+            animation: slideParaCima 1.2s ease-out forwards;
+        }
+
+        main p {
+            font-size: 1.2em;
+            opacity: 0; 
+            animation: slideParaCima 1.2s ease-out 0.5s forwards;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="fundo-container">
+        <div class="conteudo-por-cima">
+            <header>
+                <nav>
+                    <a href="index.html">Início</a>
+                    <a href="tecnologias_e_o_mundo.html">tecnologias e o mundo</a>
+                    <a href="tendencias.html">Tendências</a>
+                    <a href="Inteligencia Artificial.html">Inteligência Artificial</a>
+                    <a href="comunicar e diminuir_distancias.html">Comunicar e diminuir distancias</a>
+                    <a href="galeria.html"> galeria</a>
+                    <a href="contato.html">Contato</a>
+                </nav>
+            </header>
+            <main>
+                <h1>As tecnologias e o Mundo</h1>
+                <p>Fique por dentro de tudo que acontese no mundo digital.</p>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto da Tecnologia - Seu Site</title>
+    
+    <style>
+        /* --- FONTE FUTURISTA (Opcional, mas recomendado) --- */
+        /* Vamos importar uma fonte do Google Fonts que pareça "tech" */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap');
+
+        body {
+            margin: 0;
+            /* Fundo escuro, quase preto com um tom de azul */
+            background-color: #0a0a1a; 
+            color: #e0e0e0; /* Texto principal (cinza claro) */
+            
+            /* 'Rajdhani' é uma ótima fonte tech. 'Orbitron' é boa para títulos. */
+            font-family: 'Rajdhani', sans-serif;
+            
+            /* Imagem de fundo sutil (opcional) */
+            background-image: url('https://www.transparenttextures.com/patterns/black-felt.png');
+        }
+
+        /* --- ANIMAÇÃO DE FADE-IN --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- CABEÇALHO (Menu de Navegação) --- */
+        header {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            /* Fundo semi-transparente para o menu */
+            background-color: rgba(0, 0, 0, 0.2);
+            /* Borda neon sutil embaixo */
+            border-bottom: 1px solid #22a14244;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0c0b0b;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            
+            /* Efeito de brilho (glow) neon nos botões */
+            text-shadow: 0 0 5px #fc17c2, 0 0 10px #d9fa1e;
+        }
+
+        nav a:hover {
+            background-color: rgba(0, 255, 255, 0.1); /* Fundo ciano fraco */
+            color: #f018de; /* Cor do texto muda para ciano */
+            box-shadow: 0 0 15px #e2f028; /* Sombra "glow" mais forte */
+        }
+        
+        /* --- CONTEÚDO PRINCIPAL (Onde a mágica acontece) --- */
+        .main-content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .main-content h1 {
+            font-family: 'Orbitron', sans-serif; /* Fonte especial para o título */
+            font-size: 3.5em;
+            text-align: center;
+            color: #0e0d0d; /* Cor neon ciano */
+            text-shadow: 0 0 10px #91195d, 0 0 20px #fd2bad;
+            margin-bottom: 10px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .main-content .subtitle {
+            font-size: 1.4em;
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 60px;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        /* --- GRID DE PAINÉIS "HUD" --- */
+        .impact-grid {
+            display: grid;
+            /* Cria colunas que se adaptam (responsivo) */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* --- O PAINEL DE VIDRO (Glassmorphism) --- */
+        .impact-card {
+            /* Fundo de vidro semi-transparente */
+            background-color: rgba(10, 30, 50, 0.7);
+            
+            /* Borda neon ciano */
+            border: 1px solid #ee22b188;
+            border-radius: 8px;
+            padding: 25px;
+
+            /* Efeito de "vidro fosco" */
+            backdrop-filter: blur(5px);
+            
+            /* Sombra externa para dar profundidade */
+            box-shadow: 0 0 15px rgba(230, 25, 219, 0.2);
+            
+            transition: all 0.3s ease;
+            
+            /* Atraso na animação para cada card */
+            opacity: 0; /* Começa invisível */
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        
+        /* Atraso escalonado para os cards aparecerem um por um */
+        .impact-card:nth-child(1) { animation-delay: 0.5s; }
+        .impact-card:nth-child(2) { animation-delay: 0.7s; }
+        .impact-card:nth-child(3) { animation-delay: 0.9s; }
+        .impact-card:nth-child(4) { animation-delay: 1.1s; }
+
+        .impact-card:hover {
+            /* Efeito ao passar o mouse */
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(235, 248, 47, 0.5);
+            border-color: #fc15fc;
+        }
+
+        .impact-card h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5em;
+            color: #ffffff;
+            margin-top: 0;
+            border-bottom: 1px solid #e709a544;
+            padding-bottom: 10px;
+        }
+
+        .impact-card p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="tecnologias_e_o_mundo.html">Tecnologias e o Mundo</a>
+            <a href="tendencias.html">Tendências</a>
+            <a href="Inteligencia_artificial.html">Inteligência Artificial</a>
+            <a href="comunicar_e_diminuir_distancias.html">Comunicar e diminuir distancias</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        
+        <h1>Últimas tendências em tecnologia</h1>
+        <p class="subtitle">A Próxima Fronteira: Inovação e Competitividade no Turismo</p>
+
+<figure> <blockquote>
+            <h3><strong> “A ciência de hoje é a tecnologia de amanhã.”</strong></h3>
+        </blockquote>
+        
+        <figcaption> — <cite>— Edward Teller</cite>
+        </figcaption>
+
+        <div class="impact-grid">
+
+            <div class="impact-card">
+                <h2>Como impulsiona a Inovação e a Competitividade?</h2>
+                <p>
+                   No turismo, quem não inova, fica para trás. A tecnologia é o motor que alimenta a competitividade, forçando as empresas a melhorar ou a desaparecer.
+
+Como impulsiona a Inovação? As novas tendências obrigam a pensar "fora da caixa.
+                </p>
+<ol>
+  <li>Realidade Aumentada (AR) em Museus: Em vez de ler uma placa aborrecida, o seu telemóvel "ressuscita" o esqueleto do dinossauro. Isso é inovação na experiência do cliente.</li><br>
+  <li>Internet of Things (IoT) em Hotéis: O seu quarto de hotel "sabe" quando entra (luzes acendem-se), ajusta a temperatura que gosta e permite-lhe pedir o serviço de quartos pela TV.</li><br>
+  <li>Tecnologia Sustentável: A inovação não é só digital. Sensores que otimizam o uso de água em resorts ou apps que promovem o turismo local e evitam multidões são tendências cruciais.</li>
+</ol>
+
+
+            </div>
+
+            <div class="impact-card">
+                <h2><strong>
+Confira as últimas notícias do mundo da tecnologia, fique sempre por dentro!</strong>
+</h2>
+                <p>
+        <ul style="list-style-type: circle;">
+  <li><strong>Eficiência Operacional:</strong> Uma companhia aérea que usa IA para otimizar rotas de voo gasta menos combustível e pode oferecer bilhetes mais baratos.</li>
+</ul>
+
+<ul style="list-style-type: circle;">
+  <li></li><strong>Personalização:</strong> Um hotel que usa os seus dados para lhe dar as boas-vindas com a sua bebida favorita no minibar (baseado numa estadia anterior) ganha a sua lealdade.</li>
+</ul>
+
+<ul style="list-style-type: circle;">
+
+  <li><strong> Global:</strong> Um pequeno alojamento local no interior de Portugal pode competir com uma cadeia hoteleira global, simplesmente por estar no Airbnb e ter um ótimo marketing no Instagram. A tecnologia nivelou o campo de jogo.</li>
+</ul>
+
+                </p>
+            </div>
+
+            <div class="impact-card">
+                <h2>notícias</h2>
+                <p>Inteligência Artificial (IA) em Foco:</p>
+                  <img src="data:image/jpeg;base64,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" alt=" imagem">
+
+  <a href="https://vitormartinsconsulting.com/inteligencia-artificial-economia-2025-ai-index-report/#:~:text=A%20inteligência%20artificial%20(IA)%20é%20hoje%20um,aceleração%20em%20investimento%2C%20emprego%20e%20produtividade.%20Neste.">Inteligência Artificial e Economia em 2025: o impacto da IA na produtividade global e em Portugal</a>
+  <br>
+  <p>Ataques Patrocinados por Estados-Nação:</p>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi_tvqeNQhK4W8IMxLf3RLb8EcjdFoj-WFWA&s" alt=" imagem">
+  <a href="https://www.itsecurity.pt/news/threats/ataques-patrocinados-por-estado-nacao-dominaram-exploracao-de-vulnerabilidades-no-primeiro-semestre> ">Inteligência Artificial e Economia em 2025: o impacto da IA na produtividade global e em Portugal</a>
+                </p>
+            
+              
+            </div>
+            
+           
+        </div>
+    </main>
+
+</body>
+</html>

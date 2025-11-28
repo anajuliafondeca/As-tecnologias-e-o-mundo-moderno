@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto da Tecnologia - Seu Site</title>
+    
+    <style>
+        /* --- FONTE FUTURISTA (Opcional, mas recomendado) --- */
+        /* Vamos importar uma fonte do Google Fonts que pareça "tech" */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap');
+
+        body {
+            margin: 0;
+            /* Fundo escuro, quase preto com um tom de azul */
+            background-color: #0a0a1a; 
+            color: #e0e0e0; /* Texto principal (cinza claro) */
+            
+            /* 'Rajdhani' é uma ótima fonte tech. 'Orbitron' é boa para títulos. */
+            font-family: 'Rajdhani', sans-serif;
+            
+            /* Imagem de fundo sutil (opcional) */
+            background-image: url('https://www.transparenttextures.com/patterns/black-felt.png');
+        }
+
+        /* --- ANIMAÇÃO DE FADE-IN --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- CABEÇALHO (Menu de Navegação) --- */
+        header {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            /* Fundo semi-transparente para o menu */
+            background-color: rgba(0, 0, 0, 0.2);
+            /* Borda neon sutil embaixo */
+            border-bottom: 1px solid #22a14244;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0c0b0b;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            
+            /* Efeito de brilho (glow) neon nos botões */
+            text-shadow: 0 0 5px #fc17c2, 0 0 10px #d9fa1e;
+        }
+
+        nav a:hover {
+            background-color: rgba(0, 255, 255, 0.1); /* Fundo ciano fraco */
+            color: #f018de; /* Cor do texto muda para ciano */
+            box-shadow: 0 0 15px #e2f028; /* Sombra "glow" mais forte */
+        }
+        
+        /* --- CONTEÚDO PRINCIPAL (Onde a mágica acontece) --- */
+        .main-content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .main-content h1 {
+            font-family: 'Orbitron', sans-serif; /* Fonte especial para o título */
+            font-size: 3.5em;
+            text-align: center;
+            color: #0e0d0d; /* Cor neon ciano */
+            text-shadow: 0 0 10px #91195d, 0 0 20px #fd2bad;
+            margin-bottom: 10px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .main-content .subtitle {
+            font-size: 1.4em;
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 60px;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        /* --- GRID DE PAINÉIS "HUD" --- */
+        .impact-grid {
+            display: grid;
+            /* Cria colunas que se adaptam (responsivo) */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* --- O PAINEL DE VIDRO (Glassmorphism) --- */
+        .impact-card {
+            /* Fundo de vidro semi-transparente */
+            background-color: rgba(10, 30, 50, 0.7);
+            
+            /* Borda neon ciano */
+            border: 1px solid #ee22b188;
+            border-radius: 8px;
+            padding: 25px;
+
+            /* Efeito de "vidro fosco" */
+            backdrop-filter: blur(5px);
+            
+            /* Sombra externa para dar profundidade */
+            box-shadow: 0 0 15px rgba(230, 25, 219, 0.2);
+            
+            transition: all 0.3s ease;
+            
+            /* Atraso na animação para cada card */
+            opacity: 0; /* Começa invisível */
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        
+        /* Atraso escalonado para os cards aparecerem um por um */
+        .impact-card:nth-child(1) { animation-delay: 0.5s; }
+        .impact-card:nth-child(2) { animation-delay: 0.7s; }
+        .impact-card:nth-child(3) { animation-delay: 0.9s; }
+        .impact-card:nth-child(4) { animation-delay: 1.1s; }
+
+        .impact-card:hover {
+            /* Efeito ao passar o mouse */
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(235, 248, 47, 0.5);
+            border-color: #fc15fc;
+        }
+
+        .impact-card h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5em;
+            color: #ffffff;
+            margin-top: 0;
+            border-bottom: 1px solid #e709a544;
+            padding-bottom: 10px;
+        }
+
+        .impact-card p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="tecnologias_e_o_mundo.html">Tecnologias e o Mundo</a>
+            <a href="tendencias.html">Tendências</a>
+            <a href="Inteligencia_artificial.html">Inteligência Artificial</a>
+            <a href="comunicar_e_diminuir_distancias.html">Comunicar e diminuir distancias</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        
+        <h1>Interigencia Artificial</h1>
+        <p class="subtitle">“O futuro não é das máquinas, mas de quem sabe usá-las com inteligência.”</p>
+
+        <div class="impact-grid">
+
+            <div class="impact-card">
+                <h2>O que é Inteligência Artificial?</h2>
+                <p>
+
+<strong>A Inteligência Artificial</strong> (IA) é uma tecnologia criada para permitir que máquinas pensem e aprendam de forma semelhante aos seres humanos. Ela funciona analisando grandes quantidades de dados, identificando padrões e usando essas informações para tomar decisões, responder perguntas ou realizar tarefas automaticamente.
+                </p>
+            </div>
+
+            <div class="impact-card">
+                <h2>Como a IA funciona de forma simplificada</h2>
+                <p>
+                  <ol>
+  <li>Coleta de dados: A IA recebe informações, como textos, imagens ou números.</li>
+  <li>Aprendizado: Ela usa esses dados para aprender, treinando modelos que entendem relações e padrões.</li>
+  <li>Ação: Depois de treinada, a IA pode responder, criar, analisar ou executar tarefas por conta própria.</li>
+</ol>
+                </p>
+            </div>
+
+            <div class="impact-card">
+                <h2>Por que a IA é útil?</h2>
+                <p>
+                    A IA pode ajudar pessoas e empresas a economizar tempo, melhorar resultados e facilitar atividades do dia a dia, como responder mensagens, organizar informações, criar conteúdos, identificar problemas rapidamente e até ajudar na criatividade.
+                </p>
+                <br>
+                <p> Teste nosso IA Playground Simples, tente digitar "oi, o que é ia ou  exemplo" </p>
+            </div>
+            
+            <div class="impact-card">
+                <h2>IA Playground Simples</h2>
+               <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+
+<style>
+    
+    .box {
+        background: rgb(5, 4, 43);
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        max-width: 600px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, textarea {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #181313;
+        margin-top: 10px;
+    }
+    button {
+        margin-top: 10px;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 6px;
+        background: #ef5ffc;
+        color: rgb(19, 10, 53);
+        cursor: pointer;
+    }
+    button:hover { opacity: 0.8; }
+
+    .chat-area {
+        height: 150px;
+        overflow-y: auto;
+        background: #3d3d3d;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .msg-user {
+        text-align: right;
+        background: #172636;
+        color: rgb(231, 65, 204);
+        padding: 5px 10px;
+        margin: 5px 0;
+        border-radius: 6px;
+        display: inline-block;
+    }
+    .msg-bot {
+        text-align: left;
+        background: #f144e3;
+        padding: 5px 10px;
+        margin: 5px 0;
+        border-radius: 6px;
+        display: inline-block;
+    }
+
+    img {
+        max-width: 100%;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+</style>
+</head>
+<body>
+
+
+
+<!-- CHATBOT -->
+<div class="box">
+    <h2>Mini Chatbot</h2>
+    <div id="chat" class="chat-area"></div>
+
+    <input id="chatInput" placeholder="Digite algo...">
+    <button onclick="sendChat()">Enviar</button>
+</div>
+
+
+
+<!-- RECOMENDAÇÕES -->
+<div class="box">
+    <h2>Recomendações</h2>
+    <input id="prefInput" placeholder="Digite um tema (ex: arte, negócios)">
+    <button onclick="makeRecommendations()">Ver Recomendações</button>
+    <ul id="recList"></ul>
+</div>
+
+<!-- ANÁLISE DE TEXTO -->
+<div class="box">
+    <h2>Análise de Texto</h2>
+    <textarea id="textInput" rows="4" placeholder="Cole um texto aqui..."></textarea>
+    <button onclick="analyzeText()">Analisar</button>
+    <div id="analysis"></div>
+</div>
+
+<script>
+/* ---------- Chatbot ---------- */
+function sendChat() {
+    const input = document.getElementById("chatInput");
+    const chat = document.getElementById("chat");
+    const text = input.value.trim();
+    if (!text) return;
+
+    chat.innerHTML += `<div class="msg-user">${text}</div><br>`;
+    input.value = "";
+
+    setTimeout(() => {
+        let reply = "Não entendi. Tente outra pergunta!";
+        const t = text.toLowerCase();
+
+        if (t.includes("oi") || t.includes("olá")) reply = "Olá! Como posso ajudar?";
+        if (t.includes("o que é ia")) reply = "IA é Inteligência Artificial.";
+        if (t.includes("exemplo")) reply = "Exemplos: chatbots, filtros, recomendações, análise de texto.";
+
+        chat.innerHTML += `<div class="msg-bot">${reply}</div><br>`;
+        chat.scrollTop = chat.scrollHeight;
+    }, 500);
+}
+
+/* ---------- Geração simples de imagem ---------- */
+function generateImage() {
+    const prompt = document.getElementById("imgPrompt").value.trim();
+    const img = document.getElementById("imgOutput");
+
+    if (!prompt) return;
+
+    // Geração falsa, só mostra texto como imagem
+    img.src = "https://via.placeholder.com/500x200.png?text=" + encodeURIComponent(prompt);
+}
+
+/* ---------- Recomendações ---------- */
+function makeRecommendations() {
+    const input = document.getElementById("prefInput").value.toLowerCase();
+    const list = document.getElementById("recList");
+    list.innerHTML = "";
+
+    let recs = [];
+
+    if (input.includes("arte")) {
+        recs = ["Geradores de imagem", "Criação assistida por IA"];
+    } else if (input.includes("negócios")) {
+        recs = ["Recomendação de produtos", "Análise de clientes"];
+    } else {
+        recs = ["Chatbots", "Análise de texto"];
+    }
+
+    recs.forEach(r => {
+        list.innerHTML += `<li>${r}</li>`;
+    });
+}
+
+/* ---------- Análise de texto ---------- */
+function analyzeText() {
+    const text = document.getElementById("textInput").value.trim();
+    const out = document.getElementById("analysis");
+    if (!text) return;
+
+    const words = text.split(/\s+/).length;
+
+    out.innerHTML = `
+        <p><strong>Palavras:</strong> ${words}</p>
+        <p><strong>Resumo:</strong> ${text.substring(0, 50)}...</p>
+    `;
+}
+</script>
+
+</body>
+</html>
+
+
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

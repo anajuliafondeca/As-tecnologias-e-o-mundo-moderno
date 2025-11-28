@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto da Tecnologia - Seu Site</title>
+    
+    <style>
+        /* --- FONTE FUTURISTA (Opcional, mas recomendado) --- */
+        /* Vamos importar uma fonte do Google Fonts que pareça "tech" */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap');
+
+        body {
+            margin: 0;
+            /* Fundo escuro, quase preto com um tom de azul */
+            background-color: #0a0a1a; 
+            color: #e0e0e0; /* Texto principal (cinza claro) */
+            
+            /* 'Rajdhani' é uma ótima fonte tech. 'Orbitron' é boa para títulos. */
+            font-family: 'Rajdhani', sans-serif;
+            
+            /* Imagem de fundo sutil (opcional) */
+            background-image: url('https://www.transparenttextures.com/patterns/black-felt.png');
+        }
+
+        /* --- ANIMAÇÃO DE FADE-IN --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- CABEÇALHO (Menu de Navegação) --- */
+        header {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            /* Fundo semi-transparente para o menu */
+            background-color: rgba(0, 0, 0, 0.2);
+            /* Borda neon sutil embaixo */
+            border-bottom: 1px solid #22a14244;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0c0b0b;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            
+            /* Efeito de brilho (glow) neon nos botões */
+            text-shadow: 0 0 5px #fc17c2, 0 0 10px #d9fa1e;
+        }
+
+        nav a:hover {
+            background-color: rgba(0, 255, 255, 0.1); /* Fundo ciano fraco */
+            color: #f018de; /* Cor do texto muda para ciano */
+            box-shadow: 0 0 15px #e2f028; /* Sombra "glow" mais forte */
+        }
+        
+        /* --- CONTEÚDO PRINCIPAL (Onde a mágica acontece) --- */
+        .main-content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .main-content h1 {
+            font-family: 'Orbitron', sans-serif; /* Fonte especial para o título */
+            font-size: 3.5em;
+            text-align: center;
+            color: #0e0d0d; /* Cor neon ciano */
+            text-shadow: 0 0 10px #91195d, 0 0 20px #fd2bad;
+            margin-bottom: 10px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .main-content .subtitle {
+            font-size: 1.4em;
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 60px;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        /* --- GRID DE PAINÉIS "HUD" --- */
+        .impact-grid {
+            display: grid;
+            /* Cria colunas que se adaptam (responsivo) */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* --- O PAINEL DE VIDRO (Glassmorphism) --- */
+        .impact-card {
+            /* Fundo de vidro semi-transparente */
+            background-color: rgba(10, 30, 50, 0.7);
+            
+            /* Borda neon ciano */
+            border: 1px solid #ee22b188;
+            border-radius: 8px;
+            padding: 25px;
+
+            /* Efeito de "vidro fosco" */
+            backdrop-filter: blur(5px);
+            
+            /* Sombra externa para dar profundidade */
+            box-shadow: 0 0 15px rgba(230, 25, 219, 0.2);
+            
+            transition: all 0.3s ease;
+            
+            /* Atraso na animação para cada card */
+            opacity: 0; /* Começa invisível */
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        
+        /* Atraso escalonado para os cards aparecerem um por um */
+        .impact-card:nth-child(1) { animation-delay: 0.5s; }
+        .impact-card:nth-child(2) { animation-delay: 0.7s; }
+        .impact-card:nth-child(3) { animation-delay: 0.9s; }
+        .impact-card:nth-child(4) { animation-delay: 1.1s; }
+
+        .impact-card:hover {
+            /* Efeito ao passar o mouse */
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(235, 248, 47, 0.5);
+            border-color: #fc15fc;
+        }
+
+        .impact-card h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5em;
+            color: #ffffff;
+            margin-top: 0;
+            border-bottom: 1px solid #e709a544;
+            padding-bottom: 10px;
+        }
+
+       .impact-card p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        footer {
+            text-align: center; /* Centraliza o texto */
+            padding: 25px; /* Espaçamento interno */
+            margin-top: 60px; /* Espaço para separar do conteúdo acima */
+            color: #aaa; /* Cor cinza claro para o texto */
+            font-size: 0.9em;
+            border-top: 1px solid #ee22b188; 
+            background-color: rgba(10, 30, 50, 0.7);
+            backdrop-filter: blur(5px);
+        }
+ 
+        #imagem-canto-d { /* Imagem da DIREITA (mais em cima) */
+            position: fixed;
+            top: 600px;       /* Posição 1 */
+            right: 700px;     /* 700px da borda DIREITA */
+            width: 200px;     /* TAMANHO 1 (Mude 200px se quiser) */
+            height: auto;
+        }
+        
+        #imagem-canto-e { /* Imagem da ESQUERDA (mais em baixo) */
+            position: fixed;
+            top: 700px;       /* Posição 2 (diferente da outra) */
+            left: 300px;      /* 300px da borda ESQUERDA */
+            width: 200px;     /* TAMANHO 1 (igual à de cima) */
+            height: auto;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="tecnologias_e_o_mundo.html">Tecnologias e o Mundo</a>
+            <a href="tendencias.html">Tendências</a>
+            <a href="Inteligencia_artificial.html">Inteligência Artificial</a>
+            <a href="comunicar_e_diminuir_distancias.html">Comunicar e diminuir distancias</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        
+        <h1>As Tecnologias e o Mundo</h1>
+        <p class="subtitle">O Mundo na Ponta dos Dedos: O Impacto na Minha Viage</p>
+
+        <figure> <blockquote>
+            <h3><strong> “A tecnologia move o mundo.”</strong></h3>
+        </blockquote>
+        
+        <figcaption> — <cite>Steve Jobs</cite>
+        </figcaption>
+        
+        </figure>
+        
+        <div class="impact-grid">
+
+            <div class="impact-card">
+                <h2>Como ela nós ajudam?</h2>
+                <p>
+                <strong>Como?</strong>    
+    Através de plataformas e aplicações que cabem no nosso bolso.
+
+    Plataformas de Reserva (Booking, Airbnb): Acesso a milhões de alojamentos e voos, permitindo comparar preços e filtrar escolhas em segundos.
+
+    Mapas e GPS (Google Maps, Waze): Deixámos de nos perder. Transformámo-nos de turistas passivos em exploradores urbanos confiantes.
+                </p>
+            </div>
+
+            <div class="impact-card">
+                <h2>De que forma? Tornando o desconhecido, conhecido.</h2>
+                <p>
+    Reviews e Blogs: Já não "compramos" uma viagem às cegas. Lemos as experiências de milhares de outras pessoas, vemos fotos reais e escolhemos o restaurante com base na opinião da comunidade.
+
+    Bilhetes Eletrónicos (E-tickets): O stress de perder o bilhete de avião em papel desapareceu. Está tudo no nosso email ou na wallet do telemóvel.
+                </p>
+            </div>
+
+            <div class="impact-card">
+                <h2>Qual o impacto na minha vida? O impacto é total: democratização e personalização.</h2>
+                <p>
+                    A tecnologia deu-nos o poder de desenhar as nossas próprias viagens. Deixámos de depender de agências para tudo. O impacto é ter mais autonomia, gastar menos dinheiro (ao comparar) e ter mais segurança. O "meu mundo" tornou-se maior porque ficou mais fácil de o alcançar.
+                </p>
+            </div>
+            
+           <img class="imagem-da-grelha" src="https://media.istockphoto.com/id/1194078026/pt/foto/woman-using-gps-map-on-mobilephone.jpg?s=612x612&w=0&k=20&c=fJcoC6DzuD81OBgr5JW_QCAW3Vh3h8xFbGTVzRAdEQc=" alt="mapa antigo">
+            
+            <img class="imagem-e" src="https://media.istockphoto.com/id/473590084/pt/foto/localiza%C3%A7%C3%A3o-dublim-grampo-azul-no-mapa.jpg?s=612x612&w=0&k=20&c=qjtoyQ9-Bb-2q-HkS9Iu2_XAPdeENircpeTb272iH0s=" alt="Pino no mapa">
+
+        </div>
+    </main>
+
+</body>
+</html>

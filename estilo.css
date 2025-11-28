@@ -1,0 +1,167 @@
+/* --- FONTE FUTURISTA --- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    background-color: #0a0a1a; 
+    color: #e0e0e0;
+    font-family: 'Rajdhani', sans-serif;
+    background-image: url('https://www.transparenttextures.com/patterns/black-felt.png');
+}
+
+/* --- CABEÇALHO (Menu de Navegação) --- */
+header {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #00ffff44;
+}
+
+nav a {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+}
+
+nav a:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+    color: #00ffff;
+    box-shadow: 0 0 15px #00ffff;
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.main-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    /* Centraliza o conteúdo (o card) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5em;
+    text-align: center;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    margin-bottom: 10px;
+}
+
+.main-content .subtitle {
+    font-size: 1.4em;
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 60px;
+}
+
+/* --- O CARTÃO "GLASSMORPHISM" --- */
+.comparison-card {
+    background-color: rgba(10, 30, 50, 0.7);
+    border: 1px solid #00ffff88;
+    border-radius: 8px;
+    padding: 25px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    width: 100%;
+    max-width: 500px; /* Limita o tamanho */
+    text-align: center;
+}
+
+.comparison-card h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8em;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+/* Ajusta a imagem */
+.comparison-card img {
+    width: 100%;
+    height: auto; /* Altura automática para não esticar */
+    aspect-ratio: 4 / 3; /* Proporção 4:3 */
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #00ffff88;
+    margin-bottom: 20px; /* Espaço entre a foto e o botão */
+}
+
+/* O Botão Futurista */
+.btn-futurista {
+    background: none;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer; /* Mãozinha ao passar o mouse */
+    text-shadow: 0 0 10px #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-futurista:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+    color: #ffffff;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+}
+
+/* ================== */
+/* COLOQUE ISTO NO CSS */
+/* ================== */
+
+/* O contêiner principal (estilo "glassmorphism" rosa) */
+.comparacao-container {
+    background-color: rgba(10, 30, 50, 0.7);
+    border: 1px solid #ee22b188; /* Sua borda rosa */
+    border-radius: 8px;
+    padding: 25px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 15px rgba(230, 25, 219, 0.2); /* Sua sombra rosa */
+    margin-top: 40px; /* Espaço para separar do conteúdo acima */
+}
+
+/* O título */
+.comparacao-container h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-top: 0;
+    text-align: center;
+    border-bottom: 1px solid #e709a544; /* Sua borda de título rosa */
+    padding-bottom: 10px;
+}
+
+/* O contêiner que faz a mágica do "lado a lado" */
+.imagens-lado-a-lado {
+    display: flex; /* ATIVA O FLEXBOX */
+    justify-content: space-between; /* Coloca espaço entre as imagens */
+    gap: 20px; /* Espaço de 20px entre as imagens */
+    margin-top: 20px;
+}
+
+/* Cada "item" de imagem */
+.imagem-item {
+    flex: 1; /* Faz cada item ter 50% da largura */
+    width: 50%;
+}
+
+/* A imagem em si */
+.imagem-item img {
+    width: 100%; /* Faz a imagem preencher o contêiner */
+    height: auto; /* Mantém a proporção */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+/* ================== */
+/* FIM DO NOVO CÓDIGO */
+/* ================== */
